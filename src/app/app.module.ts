@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { FormsModule } from '@angular/forms'
+import { TodoService } from './services/todo.service';
+import { HttpModule } from '@angular/http'
+
+
 
 @NgModule({
   declarations: [
@@ -15,9 +19,10 @@ import { FormsModule } from '@angular/forms'
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
